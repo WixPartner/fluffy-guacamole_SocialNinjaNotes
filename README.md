@@ -1,5 +1,6 @@
+# A Social Ninja Scroll/Case
+# 📜ཐདདྷན磭⛩️཰རལཷསྲཱྀུཥ💫🌫️🐲ƛɶࢰʘ༆¥圆ǀ弗⛩️🐉🌊🥷🏻 📜
 <div align="center">
-# Welcome to A Social Ninja Scroll/Case
   <p><strong>A powerful block-based note-taking and knowledge management platform</strong></p>
 </div>
 
@@ -13,7 +14,7 @@ Ai-SocialNinjaScroll is a modern, feature-rich note-taking application inspired 
 <div align="center">
   <img src="/assets/dashboard.png" alt="Mentor Dashboard" width="800">
 </div>
-
+ 
 
 ## ✨ Features
 
@@ -369,3 +370,4 @@ By making a contribution to this project, I certify that:
     maintained indefinitely and may be redistributed consistent with
     this project or the open source license(s) involved.
 This project is licensed under the MIT License - see the LICENSE file for details.
+ 
