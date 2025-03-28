@@ -1,5 +1,5 @@
 <div align="center">
-#Welcome to A Social Ninja Scroll/Case
+# Welcome to A Social Ninja Scroll/Case
   <p><strong>A powerful block-based note-taking and knowledge management platform</strong></p>
 </div>
 
