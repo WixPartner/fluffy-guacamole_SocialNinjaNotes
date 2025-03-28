@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chair -->
+  <path d="M150,300 L350,300 L350,400 L150,400 Z" fill="#FFB74D"/>
+  <path d="M150,250 L350,250 L350,300 L150,300 Z" fill="#FFA726"/>
+  
+  <!-- Plant -->
+  <rect x="380" y="300" width="40" height="60" fill="#8D6E63"/>
+  <path d="M360,300 Q400,250 440,300" stroke="#4CAF50" stroke-width="8" fill="none"/>
+  <path d="M370,280 Q400,230 430,280" stroke="#4CAF50" stroke-width="8" fill="none"/>
+  
+  <!-- Person -->
+  <!-- Body -->
+  <path d="M200,200 L300,200 L280,350 L220,350 Z" fill="#90CAF9"/>
+  
+  <!-- Head -->
+  <circle cx="250" cy="150" r="50" fill="#FFCCBC"/>
+  
+  <!-- Hair -->
+  <path d="M200,150 Q250,50 300,150" fill="#FF5252"/>
+  
+  <!-- Arms -->
+  <path d="M200,200 L150,250 L170,270 L220,220" fill="#90CAF9"/>
+  <path d="M300,200 L350,250 L330,270 L280,220" fill="#90CAF9"/>
+  
+  <!-- Tablet -->
+  <rect x="220" y="230" width="100" height="70" rx="10" fill="#E0E0E0"/>
+  <rect x="230" y="240" width="80" height="50" fill="#9E9E9E"/>
+  
+  <!-- Legs -->
+  <path d="M220,350 L200,400 L240,400 L250,350" fill="#1976D2"/>
+  <path d="M280,350 L260,400 L300,400 L310,350" fill="#1976D2"/>
+</svg> 

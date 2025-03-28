@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000/api
+      - REACT_APP_GOOGLE_CLIENT_ID=${REACT_APP_GOOGLE_CLIENT_ID}
+      - REACT_APP_GITHUB_CLIENT_ID=${REACT_APP_GITHUB_CLIENT_ID}
+    depends_on:
+      - server
+    networks:
+      - mentor-network
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongodb:27017/mentor?authSource=admin
+      - NODE_ENV=production
+      - JWT_SECRET=${JWT_SECRET}
+      - PORT=5000
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
+      - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - SMTP_FROM=${SMTP_FROM}
+      - CLIENT_URL=http://localhost:3000
+    depends_on:
+      - mongodb
+    networks:
+      - mentor-network
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - mentor-network
+
+networks:
+  mentor-network:
+    driver: bridge
+
+volumes:
+  mongodb_data: 
